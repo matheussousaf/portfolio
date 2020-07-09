@@ -8,6 +8,8 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "babel-plugin-module-resolver": "^4.0.0",
+    "core-js": "3",
     "next": "^9.4.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
