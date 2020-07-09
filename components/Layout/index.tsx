@@ -1,12 +1,10 @@
 import React from "react";
 import Head from "next/head";
 
-import {
-  Navbar,
-  Option,
-  ActionsContainer,
-} from "./styles";
-import Language from "@components/Language";
+import {Body, Header, ActionsContainer } from "./styles";
+import LanguageChanger from "@components/LanguageChanger";
+import Navbar from "@components/Navbar";
+import ThemeChanger from "@components/ThemeChanger";
 
 const Layout: React.FC = () => {
   return (
@@ -18,25 +16,15 @@ const Layout: React.FC = () => {
         />
         <title>Matheus Figueirêdo | Developer</title>
       </Head>
-
-      <Navbar>
-        <Option>
-          <span>👉 </span> Sobre
-        </Option>
-        <Option>
-          <span>🔧 </span> Meu trabalho
-        </Option>
-        <Option>
-          <span>📪 </span> Contato
-        </Option>
-        <Option>
-          <span>📝 </span> Blog
-        </Option>
-
-        <ActionsContainer>
-          <Language/>
-        </ActionsContainer>
-      </Navbar>
+      <Body>
+        <Header>
+          <Navbar />
+          <ActionsContainer>
+            <LanguageChanger />
+            <ThemeChanger />
+          </ActionsContainer>
+        </Header>
+      </Body>
     </div>
   );
 };

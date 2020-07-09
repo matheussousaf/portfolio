@@ -2,7 +2,7 @@ import React from "react";
 
 import { Container, LanguageIcon } from "./styles";
 
-const Language: React.FC = () => {
+const LanguageChanger: React.FC = () => {
   return (
     <Container>
       <LanguageIcon size={30} />
@@ -10,4 +10,4 @@ const Language: React.FC = () => {
   );
 };
 
-export default Language;
+export default LanguageChanger;

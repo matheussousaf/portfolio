@@ -19,7 +19,9 @@
       "module-resolver",
       {
         "alias": {
-          "@components": "./components"
+          "@components": "./components",
+          "@styles": "./styles",
+          "@contexts": "./contexts"
         }
       }
     ]

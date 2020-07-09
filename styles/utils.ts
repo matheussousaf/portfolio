@@ -1,11 +1,10 @@
 export function luminance(hex: string, luminosity: number) {
-  // Validate hex string
   hex = String(hex).replace(/[^0-9a-f]/gi, "");
   if (hex.length < 6) {
     hex = hex.replace(/(.)/g, "$1$1");
   }
+  
   luminosity = luminosity || 0;
-  // Convert to decimal and change luminosityinosity
   var rgb = "#";
   var c;
 
@@ -15,4 +14,8 @@ export function luminance(hex: string, luminosity: number) {
     rgb += ("00" + c).substr(c.length);
   }
   return rgb;
+}
+
+export function calcFontSize(minFontSize: number, maxFontSize: number) {
+  return `calc(${minFontSize}px + (${maxFontSize} - ${minFontSize}) * ((100vw - 300px) / (1600 - 300)));`;
 }

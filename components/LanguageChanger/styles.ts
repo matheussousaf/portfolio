@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { Language } from "@styled-icons/ionicons-solid/Language";
-import { luminance } from "styles/luminance";
+import { luminance } from "@styles/utils";
 
 export const LanguageIcon = styled(Language)`
-  color: #222;
+  color: #444;
   font-size: 10px;
 `;
 
@@ -14,6 +14,7 @@ export const Container = styled.div`
   border-radius: 10px;
   display: flex;
   align-items: center;
+  margin: 10px;
   justify-content: center;
   cursor: pointer;
   padding: 5px;
