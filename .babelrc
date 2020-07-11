@@ -21,7 +21,8 @@
         "alias": {
           "@components": "./components",
           "@styles": "./styles",
-          "@contexts": "./contexts"
+          "@contexts": "./contexts",
+          "@utils": "./utils"
         }
       }
     ]

@@ -3,7 +3,6 @@ import { calcFontSize, luminance } from "@styles/utils";
 
 export const Container = styled.div``;
 
-
 export const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-around;
@@ -24,11 +23,11 @@ export const Option = styled.h3`
   font-family: "Barlow";
   font-weight: bold;
   text-transform: uppercase;
-  color: grey;
+  color: ${(props) => luminance(props.theme.colors.light, -0.5)};
   transition: 200ms;
   cursor: pointer;
 
   :hover {
-    transform: translateY(-5px);
+    color: ${(props) => luminance(props.theme.colors.light, -0.8)};
   }
 `;
