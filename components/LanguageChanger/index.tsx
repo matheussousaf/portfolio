@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import { Container, LanguageIcon } from "./styles";
-import { useAppContext } from "@contexts/app";
 
 const LanguageChanger: React.FC = () => {
   return (

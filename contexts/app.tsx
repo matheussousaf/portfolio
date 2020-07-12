@@ -14,7 +14,6 @@ const AppContextProvider: React.FC = ({ children }) => {
 
   function toggleTheme() {
     setTheme(theme === "light" ? "dark" : "light");
-    console.log(theme);
   }
 
   return (

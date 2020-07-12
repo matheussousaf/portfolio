@@ -5,7 +5,18 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     outline: 0;
-    color: ${(props) => (props.theme.colors.main ? "white" : "black")};
+    background: blue;
+    display: flex;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+  }
+
+  #__next {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
   }
 `;
 

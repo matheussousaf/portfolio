@@ -5,7 +5,13 @@ export const Title = styled.h1`
   font-weight: bold;
 `;
 
-export const Body = styled.div``;
+export const Body = styled.div`
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  background: red;
+`;
+
 export const Header = styled.div`
   display: flex;
   align-items: center;

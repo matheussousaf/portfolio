@@ -18,9 +18,9 @@ const ThemeChanger: React.FC = () => {
 
   return (
     <Container>
-      <ButtonContainer active={theme === "light"}>
+      <ButtonContainer active={theme === "dark"}>
         <SunIcon size={25} />
-        <Toggle active={theme === "light"} onClick={handleToggleTheme} />
+        <Toggle active={theme === "dark"} onClick={() => handleToggleTheme()} />
         <MoonIcon size={25} />
       </ButtonContainer>
     </Container>
