@@ -1,16 +1,15 @@
 import styled from "styled-components";
 import { Language } from "@styled-icons/ionicons-solid/Language";
-import { luminance } from "@styles/utils";
 
 export const LanguageIcon = styled(Language)`
-  color: #444;
+  color: ${(props) => props.theme.colors.black};
   font-size: 10px;
 `;
 
 export const Container = styled.div`
   width: 40px;
   height: 40px;
-  background: ${(props) => luminance(props.theme.colors.light, -0.05)};
+  background: ${(props) => props.theme.colors.gray};
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -21,6 +20,6 @@ export const Container = styled.div`
   transition: 200ms;
 
   &:hover {
-    background: ${(props) => luminance(props.theme.colors.light, -0.1)};
+    background: ${(props) => props.theme.colors.lightgray};
   }
 `;

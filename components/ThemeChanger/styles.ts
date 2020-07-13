@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { luminance } from "@styles/utils";
 import { Moon } from "@styled-icons/boxicons-solid/Moon";
 import { Sun } from "@styled-icons/boxicons-solid/Sun";
 
@@ -15,7 +14,7 @@ export const ButtonContainer = styled.div<Props>`
   position: relative;
   width: 80px;
   height: 45px;
-  background: ${(props) => luminance(props.theme.colors.light, -0.05)};
+  background: ${(props) => props.theme.colors.lightgray};
   border-radius: 10px;
   padding: 0;
   display: flex;
@@ -30,7 +29,7 @@ export const ButtonContainer = styled.div<Props>`
 `;
 
 export const Toggle = styled.div<Props>`
-  background: ${(props) => luminance(props.theme.colors.light, -0.2)};
+  background: ${(props) => props.theme.colors.gray};
   width: 45px;
   height: 45px;
   border-radius: 10px;
@@ -45,14 +44,16 @@ export const Toggle = styled.div<Props>`
   `}
 `;
 export const MoonIcon = styled(Moon)`
+  transition: 0ms !important;
   position: absolute;
-  color: white;
+  color: ${(props) => props.theme.colors.black};
   font-size: 10px;
   left: 10px;
 `;
 export const SunIcon = styled(Sun)`
+  transition: 0ms !important;
   position: absolute;
-  color: #444;
+  color: ${(props) => props.theme.colors.black};
   font-size: 10px;
   right: 8px;
 `;

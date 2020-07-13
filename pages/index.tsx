@@ -1,19 +1,31 @@
 import React from "react";
 import Layout from "@components/Layout";
 import { ThemeProvider } from "styled-components";
-import { lightTheme } from "@styles/themes";
+import { lightTheme, darkTheme } from "@styles/themes";
 import { GlobalStyle } from "@styles/GlobalStyle";
-import AppContextProvider from "contexts/app";
+import AppContextProvider, { useAppContext } from "@contexts/app";
 
 const IndexPage: React.FC = () => {
   return (
     <>
       <AppContextProvider>
-        <ThemeProvider theme={lightTheme}>
-          <GlobalStyle />
-          <Layout title="Matheus Figueirêdo" />;
-        </ThemeProvider>
+        <Main />
       </AppContextProvider>
+    </>
+  );
+};
+
+const Main: React.FC = () => {
+  const { theme } = useAppContext();
+
+  console.log(theme);
+
+  return (
+    <>
+      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+        <GlobalStyle />
+        <Layout title="Matheus Figueirêdo" />
+      </ThemeProvider>
     </>
   );
 };

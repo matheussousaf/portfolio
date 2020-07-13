@@ -7,9 +7,16 @@ export const Title = styled.h1`
 
 export const Body = styled.div`
   flex: 1;
+  background: ${(props) => props.theme.colors.white};
   width: 100%;
   height: 100%;
-  background: red;
+`;
+
+export const Section = styled.div`
+  height: 80%;
+  padding: 0 10vw;
+  display: flex;
+  align-items: center;
 `;
 
 export const Header = styled.div`

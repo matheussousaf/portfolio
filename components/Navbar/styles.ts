@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { calcFontSize, luminance } from "@styles/utils";
+import { calcFontSize } from "@styles/utils";
 
 export const Container = styled.div``;
 
@@ -16,18 +16,18 @@ export const NavbarContainer = styled.div`
     bottom: 0;
     position: fixed;
     font-size: ${calcFontSize(10, 20)};
-    background: ${(props) => luminance(props.theme.colors.light, -0.1)};
+    background: ${(props) => props.theme.colors.lightgray};
   }
 `;
 export const Option = styled.h3`
   font-family: "Barlow";
   font-weight: bold;
   text-transform: uppercase;
-  color: ${(props) => luminance(props.theme.colors.light, -0.5)};
+  color: ${(props) => props.theme.colors.darkgray};
   transition: 200ms;
   cursor: pointer;
 
   :hover {
-    color: ${(props) => luminance(props.theme.colors.light, -0.8)};
+    color: ${(props) => props.theme.colors.black};
   }
 `;

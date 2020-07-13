@@ -6,9 +6,16 @@ declare module "styled-components" {
   export interface DefaultTheme {
     borderRadius: string;
     colors: {
+      absoluteWhite: string;
+      absoluteBlack: string;
+      absoluteGray: string;
+      absoluteDarkGray: string;
       main: string;
-      light: string;
-      dark: string;
+      white: string;
+      black: string;
+      lightgray: string;
+      gray: string;
+      darkgray: string;
     };
   }
 }

@@ -1,9 +1,19 @@
 import React from "react";
 
-// import { Container } from './styles';
+import { Container, Title } from "./styles";
 
-const Button: React.FC = () => {
-  return <div />;
+interface Props {
+  title: string;
+  onClick?: Function;
+  isPrimary?: boolean;
+}
+
+const Button: React.FC<Props> = ({ title, isPrimary }) => {
+  return (
+    <Container isPrimary={isPrimary}>
+      <Title isPrimary={isPrimary}>{title}</Title>
+    </Container>
+  );
 };
 
 export default Button;

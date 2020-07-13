@@ -1,11 +1,12 @@
 import React from "react";
 import Head from "next/head";
 
-import { Body, Header, ActionsContainer } from "./styles";
+import { Body, Header, ActionsContainer, Section } from "./styles";
 import LanguageChanger from "@components/LanguageChanger";
 import Navbar from "@components/Navbar";
 import ThemeChanger from "@components/ThemeChanger";
 import { PageProps } from "interfaces";
+import Introduction from "@components/Introduction";
 
 const Layout: React.FC<PageProps> = ({ title }) => {
   return (
@@ -25,9 +26,9 @@ const Layout: React.FC<PageProps> = ({ title }) => {
             <ThemeChanger />
           </ActionsContainer>
         </Header>
-        <div>
-          <h1>Massa demais</h1>
-        </div>
+        <Section>
+          <Introduction />
+        </Section>
       </Body>
     </>
   );
