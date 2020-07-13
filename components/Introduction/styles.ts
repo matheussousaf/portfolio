@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { calcFontSize } from "@styles/utils";
 
 export const Container = styled.div``;
@@ -30,6 +30,24 @@ export const Subtitle = styled.p`
   color: ${(props) => props.theme.colors.darkgray};
 `;
 
+const rotate = keyframes`
+  0% {
+    transform: rotate(0deg)
+  }
+
+  50% {
+    transform: rotate(40deg)
+  }
+
+  75% {
+    transform: rotate(-20deg)
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+`;
+
 export const Intro = styled.p`
   margin: 20px 0;
   font-family: "Barlow", sans-serif;
@@ -37,4 +55,19 @@ export const Intro = styled.p`
   text-transform: uppercase;
   color: ${(props) => props.theme.colors.absoluteDarkGray};
   font-size: ${calcFontSize(18, 21)};
+`;
+
+export const IntroContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const Emoji = styled.span`
+  font-size: ${calcFontSize(20, 23)};
+  margin-left: 5px;
+
+  :hover {
+    writing-mode: vertical-rl;
+    animation: ${rotate} 200ms linear;
+  }
 `;
