@@ -13,9 +13,9 @@ export const Body = styled.div`
 `;
 
 export const Section = styled.div`
-  height: 80%;
   padding: 0 10vw;
   display: flex;
+  flex: 1;
   align-items: center;
 `;
 
