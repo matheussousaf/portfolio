@@ -5,6 +5,7 @@ import LanguageChanger from "@components/LanguageChanger";
 import Navbar from "@components/Navbar";
 import ThemeChanger from "@components/ThemeChanger";
 import Introduction from "@components/Introduction";
+import Scroll from "@components/Scroll";
 
 const Layout: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const Layout: React.FC = () => {
         <Section>
           <Introduction />
         </Section>
+        <Scroll />
       </Body>
     </>
   );

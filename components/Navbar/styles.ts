@@ -1,6 +1,18 @@
 import styled from "styled-components";
 import { calcFontSize } from "@styles/utils";
 
+import ReactTooltip from "react-tooltip";
+
+export const Tooltip = styled(ReactTooltip)`
+  font-family: "Barlow", sans-serif;
+  font-size: 20px;
+  color: ${(props) => props.theme.colors.darkgray};
+  background: ${(props) => props.theme.colors.lightgray};
+  text-transform: uppercase;
+  transition: 0ms !important;
+  margin-top: 10px !important;
+`;
+
 export const Container = styled.div``;
 
 export const NavbarContainer = styled.div`
@@ -19,6 +31,7 @@ export const NavbarContainer = styled.div`
     background: ${(props) => props.theme.colors.lightgray};
   }
 `;
+
 export const Option = styled.h3`
   font-family: "Barlow";
   font-weight: bold;

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const Title = styled.h1`
   font-family: "Asap", sans-serif;
@@ -16,12 +16,14 @@ export const Section = styled.div`
   padding: 0 10vw;
   display: flex;
   flex: 1;
+  min-height: 80%;
   align-items: center;
 `;
 
 export const Header = styled.div`
   display: flex;
   align-items: center;
+  height: 10%;
 `;
 
 export const ActionsContainer = styled.div`

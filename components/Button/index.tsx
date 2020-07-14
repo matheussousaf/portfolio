@@ -1,16 +1,15 @@
-import React from "react";
+import React, { RefAttributes } from "react";
 
 import { Container, Title } from "./styles";
 
-interface Props {
+interface Props extends RefAttributes<any> {
   title: string;
-  onClick?: Function;
   isPrimary?: boolean;
 }
 
-const Button: React.FC<Props> = ({ title, isPrimary }) => {
+const Button: React.FC<Props> = ({ title, isPrimary, ...props }) => {
   return (
-    <Container isPrimary={isPrimary}>
+    <Container {...props} isPrimary={isPrimary}>
       <Title isPrimary={isPrimary}>{title}</Title>
     </Container>
   );

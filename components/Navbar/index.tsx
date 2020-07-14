@@ -1,14 +1,17 @@
 import React from "react";
-import { NavbarContainer, Option } from "./styles";
-
-// import { Container } from './styles';
+import { NavbarContainer, Option, Tooltip } from "./styles";
 
 const Navbar: React.FC = () => {
   return (
     <>
       <NavbarContainer>
-        <Option>
+        <Option data-tip data-for="matters">
           <span>👉 </span> Sobre
+          <Tooltip id="matters" place="bottom" effect="solid">
+            <span>
+              Opa!<span>✨</span>{" "}
+            </span>
+          </Tooltip>
         </Option>
         <Option>
           <span>🔧 </span> Meu trabalho

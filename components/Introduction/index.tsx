@@ -1,6 +1,14 @@
 import React from "react";
 
-import { Container, ButtonContainer, IntroContainer, Title, Subtitle, Intro, Emoji} from "./styles";
+import {
+  Container,
+  ButtonContainer,
+  IntroContainer,
+  Title,
+  Subtitle,
+  Intro,
+  Emoji,
+} from "./styles";
 import Button from "@components/Button";
 
 const Introduction: React.FC = () => {
