@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "@components/Layout";
-import { ThemeProvider, ServerStyleSheet } from "styled-components";
+import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "@styles/themes";
 import { GlobalStyle } from "@styles/GlobalStyle";
 import AppContextProvider, { useAppContext } from "@contexts/app";
