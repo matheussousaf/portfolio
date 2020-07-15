@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Moon } from "@styled-icons/boxicons-solid/Moon";
 import { Sun } from "@styled-icons/boxicons-solid/Sun";
 
@@ -29,8 +29,9 @@ export const ButtonContainer = styled.div<Props>`
 
   ${({ active, theme }) =>
     active &&
-    `background: ${theme.colors.main};
-  `}
+    css`
+      background: ${theme.colors.main};
+    `}
 `;
 
 export const Toggle = styled.div<Props>`
@@ -44,9 +45,9 @@ export const Toggle = styled.div<Props>`
 
   ${({ active }) =>
     active &&
-    `
-    transform: translateX(40px);
-  `}
+    css`
+      transform: translateX(40px);
+    `}
 `;
 export const MoonIcon = styled(Moon)`
   transition: 0ms !important;
