@@ -23,7 +23,7 @@ export const upAndDown = keyframes`
   }
 
   33% {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
   }
 
   100% {
@@ -37,7 +37,7 @@ export const ScrollDown = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0;
-  animation: ${upAndDown} 2s linear infinite;
+  animation: ${upAndDown} 3s ease-in-out infinite;
 `;
 
 export const ScrollText = styled.p`

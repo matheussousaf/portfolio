@@ -1,27 +1,39 @@
 import React from "react";
-import { NavbarContainer, Option, Tooltip } from "./styles";
+import { NavbarContainer, Container, Option, Tooltip, New } from "./styles";
 
 const Navbar: React.FC = () => {
   return (
     <>
       <NavbarContainer>
-        <Option data-tip data-for="matters">
-          <span>👉 </span> Sobre
-          <Tooltip id="matters" place="bottom" effect="solid">
-            <span>
-              Opa!<span>✨</span>{" "}
-            </span>
+        <Container>
+          <Option>
+            <span>👉 </span> Sobre
+          </Option>
+          <Tooltip>Entenda um pouco sobre mim</Tooltip>
+        </Container>
+
+        <Container>
+          <Option>
+            <span>🔧 </span> Trabalho
+          </Option>
+          <Tooltip>Veja um pouco do meu trabalho</Tooltip>
+        </Container>
+        <Container>
+          <Option>
+            <span>📪 </span> Contato
+          </Option>
+          <Tooltip>Quer falar comigo? Clica aqui!</Tooltip>
+        </Container>
+        <Container>
+          <Option>
+            <span>📝 </span> Blog
+          </Option>
+
+          <Tooltip>
+            <New>Novidade!</New>
+            Minha jornada! Em construção
           </Tooltip>
-        </Option>
-        <Option>
-          <span>🔧 </span> Meu trabalho
-        </Option>
-        <Option>
-          <span>📪 </span> Contato
-        </Option>
-        <Option>
-          <span>📝 </span> Blog
-        </Option>
+        </Container>
       </NavbarContainer>
     </>
   );

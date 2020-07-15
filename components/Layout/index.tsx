@@ -6,6 +6,7 @@ import Navbar from "@components/Navbar";
 import ThemeChanger from "@components/ThemeChanger";
 import Introduction from "@components/Introduction";
 import Scroll from "@components/Scroll";
+import Socials from "@components/Socials";
 
 const Layout: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const Layout: React.FC = () => {
           </ActionsContainer>
         </Header>
         <Section>
+          <Socials />
           <Introduction />
         </Section>
         <Scroll />
