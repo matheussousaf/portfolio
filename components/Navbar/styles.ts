@@ -51,9 +51,10 @@ export const Container = styled.div`
     justify-content: center;
     transition: 0ms !important;
     flex-direction: column;
+    align-items: center;
 
     &::before {
-      top: -5px;
+      top: -4px;
       position: absolute;
       content: "";
       width: 10px;

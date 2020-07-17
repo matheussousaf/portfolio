@@ -9,14 +9,14 @@ import Head from "next/head";
 const IndexPage: React.FC = () => {
   return (
     <>
+      <Head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600&family=Barlow:wght@700&family=Manrope:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+        <title>Matheus Figueirêdo</title>
+      </Head>
       <AppContextProvider>
-        <Head>
-          <link
-            href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600&family=Barlow:wght@700&family=Manrope:wght@400;700&display=swap"
-            rel="stylesheet"
-          />
-          <title>Matheus Figueirêdo</title>
-        </Head>
         <Main />
       </AppContextProvider>
     </>
@@ -25,8 +25,6 @@ const IndexPage: React.FC = () => {
 
 const Main: React.FC = () => {
   const { theme } = useAppContext();
-
-  console.log(theme);
 
   return (
     <>

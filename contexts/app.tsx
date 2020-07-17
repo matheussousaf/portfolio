@@ -1,6 +1,4 @@
-import React, { useContext, createContext, useState } from "react";
-
-// import { Container } from './styles';
+import React, { useContext, createContext, useEffect, useState } from "react";
 
 interface App {
   theme: string;
@@ -12,8 +10,14 @@ const AppContext = createContext({} as App);
 const AppContextProvider: React.FC = ({ children }) => {
   const [theme, setTheme] = useState("light");
 
+  useEffect(() => {
+    setTheme(localStorage.getItem("theme"));
+  }, []);
+
   function toggleTheme() {
-    setTheme(theme === "light" ? "dark" : "light");
+    const themeColor = theme === "light" ? "dark" : "light";
+    setTheme(themeColor);
+    localStorage.setItem("theme", themeColor);
   }
 
   return (
