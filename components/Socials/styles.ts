@@ -32,7 +32,7 @@ export const Container = styled.div<Props>`
         justify-content: center;
 
         > div {
-          scale: 0;
+          opacity: 0;
         }
 
         #icon {

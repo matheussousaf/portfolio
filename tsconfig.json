@@ -26,5 +26,5 @@
     }
   },
   "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx", "pages/_document.tsx"]
+  "include": ["**/*.ts", "**/*.tsx", "pages/_document.tsx", "next.config.js"]
 }

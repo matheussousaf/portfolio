@@ -1,0 +1,22 @@
+{
+  "language": "English",
+  "navbar": {
+    "about": "About",
+    "work": "Work",
+    "contact": "Contact",
+    "blog": "Blog",
+    "aboutHint": "Get to know about me",
+    "workHint": "See a bit of my work",
+    "contactHint": "Contact me, click here!",
+    "blogHint": "My journey (under development)",
+    "new": "New"
+  },
+  "intro": {
+    "introduction": "Hi, I'm Matheus",
+    "title": "And I build software that matters",
+    "subtitle": "I turn your ideas in real life solutions that bring real value",
+    "mainButtonText": "My Work",
+    "secondaryButtonText": "Hire Me"
+  },
+  "scrollDownText": "Scroll Down"
+}

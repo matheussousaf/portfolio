@@ -5,8 +5,15 @@ import { lightTheme, darkTheme } from "@styles/themes";
 import { GlobalStyle } from "@styles/GlobalStyle";
 import AppContextProvider, { useAppContext } from "@contexts/app";
 import Head from "next/head";
+import fs from "fs";
+import { Content } from "interfaces";
+import { GetStaticProps } from "next";
 
-const IndexPage: React.FC = () => {
+export interface Props {
+  languages: Content[];
+}
+
+const IndexPage: React.FC<Props> = ({ languages }) => {
   return (
     <>
       <Head>
@@ -16,7 +23,7 @@ const IndexPage: React.FC = () => {
         />
         <title>Matheus Figueirêdo</title>
       </Head>
-      <AppContextProvider>
+      <AppContextProvider languages={languages}>
         <Main />
       </AppContextProvider>
     </>
@@ -34,6 +41,24 @@ const Main: React.FC = () => {
       </ThemeProvider>
     </>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const files = fs.readdirSync(`${process.cwd()}/content/languages`);
+
+  const languages = files.map((filename: string) => {
+    const jsonContent = fs
+      .readFileSync(`content/languages/${filename}`)
+      .toString();
+
+    return JSON.parse(jsonContent);
+  });
+
+  return {
+    props: {
+      languages,
+    },
+  };
 };
 
 export default IndexPage;

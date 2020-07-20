@@ -1,37 +1,40 @@
 import React from "react";
 import { NavbarContainer, Container, Option, Tooltip, New } from "./styles";
+import { useAppContext } from "@contexts/app";
 
 const Navbar: React.FC = () => {
+  const { currentContent } = useAppContext();
+
   return (
     <>
       <NavbarContainer>
         <Container>
           <Option>
-            <span>👉 </span> Sobre
+            <span>👉 </span> {currentContent.navbar.about}
           </Option>
-          <Tooltip>Entenda um pouco sobre mim</Tooltip>
+          <Tooltip>{currentContent.navbar.aboutHint}</Tooltip>
         </Container>
 
         <Container>
           <Option>
-            <span>🔧 </span> Trabalho
+            <span>🔧 </span> {currentContent.navbar.work}
           </Option>
-          <Tooltip>Veja um pouco do meu trabalho</Tooltip>
+          <Tooltip>{currentContent.navbar.workHint}</Tooltip>
         </Container>
         <Container>
           <Option>
-            <span>📪 </span> Contato
+            <span>📪 </span> {currentContent.navbar.contact}
           </Option>
-          <Tooltip>Quer falar comigo? Clica aqui!</Tooltip>
+          <Tooltip>{currentContent.navbar.contactHint}</Tooltip>
         </Container>
         <Container>
           <Option>
-            <span>📝 </span> Blog
+            <span>📝 </span> {currentContent.navbar.blog}
           </Option>
 
           <Tooltip>
-            <New>Novidade!</New>
-            Minha jornada! Em construção
+            <New>{currentContent.navbar.new}!</New>
+            {currentContent.navbar.blogHint}
           </Tooltip>
         </Container>
       </NavbarContainer>

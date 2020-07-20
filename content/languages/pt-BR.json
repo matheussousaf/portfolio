@@ -1,0 +1,22 @@
+{
+  "language": "Português",
+  "navbar": {
+    "about": "Sobre",
+    "work": "Trabalho",
+    "contact": "Contato",
+    "blog": "Blog",
+    "aboutHint": "Entenda um pouco sobre mim",
+    "workHint": "Veja um pouco do meu trabalho",
+    "contactHint": "Fala comigo, clica aqui!",
+    "blogHint": "Minha Jornada (em construção)",
+    "new": "Novidade"
+  },
+  "intro": {
+    "introduction": "Me chamo Matheus",
+    "title": "E eu construo software que importa",
+    "subtitle": "Transformo suas ideias em soluções que trazem real valor e qualidade",
+    "mainButtonText": "Meu Trabalho",
+    "secondaryButtonText": "Me Contrate"
+  },
+  "scrollDownText": "Arraste para baixo"
+}

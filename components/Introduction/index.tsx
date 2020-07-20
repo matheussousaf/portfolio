@@ -10,21 +10,22 @@ import {
   Emoji,
 } from "./styles";
 import Button from "@components/Button";
+import { useAppContext } from "@contexts/app";
 
 const Introduction: React.FC = () => {
+  const { currentContent } = useAppContext();
+
   return (
     <Container>
       <IntroContainer>
-        <Intro>Me chamo Matheus</Intro>
+        <Intro>{currentContent.intro.introduction}</Intro>
         <Emoji>👋</Emoji>
       </IntroContainer>
-      <Title>E eu construo software que importa.</Title>
-      <Subtitle>
-        Transformo suas ideias em soluções que trazem real valor e qualidade.
-      </Subtitle>
+      <Title>{currentContent.intro.title}</Title>
+      <Subtitle>{currentContent.intro.subtitle}</Subtitle>
       <ButtonContainer>
-        <Button title="Meu trabalho" isPrimary />
-        <Button title="Me contrate" />
+        <Button title={currentContent.intro.mainButtonText} isPrimary />
+        <Button title={currentContent.intro.secondaryButtonText} />
       </ButtonContainer>
     </Container>
   );
