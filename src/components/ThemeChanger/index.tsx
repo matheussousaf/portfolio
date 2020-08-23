@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import {
   Container,
@@ -7,20 +7,25 @@ import {
   SunIcon,
   MoonIcon,
 } from "./styles";
-import { useAppContext } from "@contexts/app";
+import useDarkMode from "use-dark-mode";
 
 const ThemeChanger: React.FC = () => {
-  const { toggleTheme, theme } = useAppContext();
+  const { enable, disable, value } = useDarkMode(false);
+
+  useEffect(() => {
+    console.log(value);
+  }, []);
 
   function handleToggleTheme() {
-    toggleTheme();
+    value ? disable() : enable();
+    console.log(value);
   }
 
   return (
     <Container>
-      <ButtonContainer active={theme === "dark"}>
+      <ButtonContainer active={value}>
         <SunIcon size={25} />
-        <Toggle active={theme === "dark"} onClick={() => handleToggleTheme()} />
+        <Toggle active={value} onClick={() => handleToggleTheme()} />
         <MoonIcon size={25} />
       </ButtonContainer>
     </Container>

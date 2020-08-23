@@ -1,9 +1,7 @@
 import React from "react";
 import Layout from "@components/Layout";
-import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "@styles/themes";
 import { GlobalStyle } from "@styles/GlobalStyle";
-import AppContextProvider, { useAppContext } from "@contexts/app";
+import AppContextProvider from "@contexts/index";
 import Head from "next/head";
 import fs from "fs";
 import { Content } from "@interfaces/index";
@@ -24,27 +22,14 @@ const IndexPage: React.FC<Props> = ({ languages }) => {
         <title>Matheus Figueirêdo</title>
       </Head>
       <AppContextProvider languages={languages}>
-        <Main />
+        <GlobalStyle />
+        <Layout />
       </AppContextProvider>
     </>
   );
 };
 
-const Main: React.FC = () => {
-  const { theme } = useAppContext();
-
-  return (
-    <>
-      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-        <GlobalStyle />
-        <Layout />
-      </ThemeProvider>
-    </>
-  );
-};
-
 export const getStaticProps: GetStaticProps = async () => {
-  console.log(process.cwd())
   const files = fs.readdirSync(`${process.cwd()}/src/content/languages`);
 
   const languages = files.map((filename: string) => {

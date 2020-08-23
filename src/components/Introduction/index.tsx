@@ -10,7 +10,7 @@ import {
   Emoji,
 } from "./styles";
 import Button from "@components/Button";
-import { useAppContext } from "@contexts/app";
+import { useAppContext } from "@contexts/index";
 
 const Introduction: React.FC = () => {
   const { currentContent } = useAppContext();

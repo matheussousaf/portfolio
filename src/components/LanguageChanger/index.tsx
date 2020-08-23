@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Container, LanguageIcon } from "./styles";
-import { useAppContext, Languages } from "@contexts/app";
+import { useAppContext, Languages } from "@contexts/index";
 
 const LanguageChanger: React.FC = () => {
   const { changeLanguage, currentLanguage } = useAppContext();

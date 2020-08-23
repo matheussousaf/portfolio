@@ -25,17 +25,14 @@
           "@utils": "./src/utils",
           "@pages": "./src/pages",
           "@hooks": "./src/hooks",
-          "@interfaces": "./src/interfaces"
+          "@interfaces": "./src/interfaces",
+          "@assets": "./src/assets"
         }
       }
     ],
     [
-      "styled-components",
-      {
-        "ssr": true,
-        "displayName": true,
-        "preprocess": false
-      }
+      "babel-plugin-styled-components",
+      { "ssr": true, "displayName": true, "preprocess": false }
     ]
   ],
   "env": {

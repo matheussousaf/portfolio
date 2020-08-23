@@ -1,6 +1,6 @@
 import React from "react";
 import { NavbarContainer, Container, Option, Tooltip, New } from "./styles";
-import { useAppContext } from "@contexts/app";
+import { useAppContext } from "@contexts/index";
 
 const Navbar: React.FC = () => {
   const { currentContent } = useAppContext();

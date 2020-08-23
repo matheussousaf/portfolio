@@ -25,14 +25,15 @@
       "@utils/*": ["src/utils/*"],
       "@pages/*": ["src/pages/*"],
       "@hooks/*": ["src/hooks/*"],
-      "@interfaces/*": ["src/interfaces/*"]
+      "@interfaces/*": ["src/interfaces/*"],
+      "@assets/*": ["src/assets/*"]
     }
   },
   "exclude": ["node_modules"],
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    "src/pages/_document.tsx",
+    "src/hooks/_document.tsx",
     "next.config.js"
   ]
 }

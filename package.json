@@ -12,11 +12,13 @@
     "@next/mdx": "^9.4.4",
     "gray-matter": "^4.0.2",
     "next": "^9.4.4",
+    "next-images": "^1.4.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-tooltip": "^4.2.7",
     "styled-components": "^5.1.1",
-    "styled-icons": "^10.6.0"
+    "styled-icons": "^10.6.0",
+    "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
     "@types/node": "^12.12.21",
@@ -24,6 +26,7 @@
     "@types/react-dom": "^16.9.4",
     "@types/styled-components": "^5.1.1",
     "babel-plugin-module-resolver": "^4.0.0",
+    "babel-plugin-styled-components": "^1.11.0-0",
     "core-js": "3",
     "typescript": "3.7.3"
   },
