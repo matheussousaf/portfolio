@@ -6,7 +6,7 @@ import { GlobalStyle } from "@styles/GlobalStyle";
 import AppContextProvider, { useAppContext } from "@contexts/app";
 import Head from "next/head";
 import fs from "fs";
-import { Content } from "interfaces";
+import { Content } from "@interfaces/index";
 import { GetStaticProps } from "next";
 
 export interface Props {
@@ -44,11 +44,12 @@ const Main: React.FC = () => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const files = fs.readdirSync(`${process.cwd()}/content/languages`);
+  console.log(process.cwd())
+  const files = fs.readdirSync(`${process.cwd()}/src/content/languages`);
 
   const languages = files.map((filename: string) => {
     const jsonContent = fs
-      .readFileSync(`content/languages/${filename}`)
+      .readFileSync(`src/content/languages/${filename}`)
       .toString();
 
     return JSON.parse(jsonContent);

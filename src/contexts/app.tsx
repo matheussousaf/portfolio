@@ -1,6 +1,6 @@
 import React, { useContext, createContext, useEffect, useState } from "react";
-import { Content } from "interfaces";
-import { Props } from "pages";
+import { Content } from "@interfaces/index";
+import { Props } from "@pages/index";
 
 interface App {
   theme: string;

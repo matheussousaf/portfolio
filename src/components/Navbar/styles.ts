@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { calcFontSize } from "@styles/utils";
+import { calcFontSize } from "src/styles/utils";
 
 export const New = styled.span`
   background: ${(props) => props.theme.colors.main};
