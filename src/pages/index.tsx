@@ -12,7 +12,13 @@ export interface Props {
 
 const IndexPage: React.FC<Props> = ({ languages }) => {
   return (
-    <div style={{ width: "100%", height: "100%", background: "red", flex: 1, zIndex: 99 }}>
+    <div
+      style={{
+        width: "100%",
+        height: "100%",
+        flex: 1,
+      }}
+    >
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600&family=Barlow:wght@700&family=Manrope:wght@400;700&display=swap"

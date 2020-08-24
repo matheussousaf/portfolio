@@ -1,19 +1,7 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
-  render() {
-    return (
-      <Html>
-        <Head />
-        <body>
-          <script src="noflash.js" />
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
-  }
 
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet();

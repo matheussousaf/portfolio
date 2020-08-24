@@ -14,7 +14,6 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100%;
     position: absolute;
-    background: ${(props) => props.theme.colors.white};
   }
 
   #__next {
