@@ -41,6 +41,11 @@ export const Toggle = styled.div<Props>`
   cursor: pointer;
   transition: 200ms ease-in-out;
   z-index: 5;
+  -webkit-tap-highlight-color: transparent;
+
+  &:active {
+    background: ${(props) => props.theme.colors.lightgray};
+  }
 
   ${({ active }) =>
     active &&

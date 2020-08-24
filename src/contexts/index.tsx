@@ -24,20 +24,20 @@ const AppContext = createContext({} as App);
 
 const AppContextProvider: React.FC<Props> = ({ children, languages }) => {
   const [theme, setTheme] = useLocalStorage<"dark" | "light">("theme", "dark");
-  const [isMounted, setMounted] = useState(false);
-
-  const [currentContent, setCurrentContent] = useState<Content>(
+  const [currentContent, setCurrentContent] = useLocalStorage<Content>(
+    "content",
     languages[Languages.Portuguese]
   );
+  const [currentLanguage, setCurrentLanguage] = useLocalStorage<LanguagesType>(
+    "languages",
+    Languages.Portuguese
+  );
+
+  const [isMounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    console.log(theme);
   }, []);
-
-  const [currentLanguage, setCurrentLanguage] = useState<LanguagesType>(
-    Languages.Portuguese
-  );
 
   function changeLanguage(languageNumber: LanguagesType) {
     setCurrentLanguage(languageNumber);
