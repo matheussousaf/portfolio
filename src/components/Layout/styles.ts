@@ -5,6 +5,11 @@ export const Title = styled.h1`
   font-weight: bold;
 `;
 
+export const Container = styled.div`
+  width: 100%;
+  height: 100%;
+`;
+
 export const Body = styled.div`
   background: ${(props) => props.theme.colors.white};
   width: 100%;
@@ -12,7 +17,7 @@ export const Body = styled.div`
 `;
 
 export const Section = styled.div`
-  padding: 0 10vw;
+  padding: 0 20vw 0 8vw;
   display: flex;
   flex: 1;
   min-height: 80%;

@@ -4,7 +4,6 @@ import { Sun } from "@styled-icons/boxicons-solid/Sun";
 
 export const Container = styled.div`
   margin-left: auto;
-  margin-right: 2vh;
 
   @media (max-width: 768px) {
     margin-right: 0;

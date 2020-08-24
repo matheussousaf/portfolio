@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Body, Header, ActionsContainer, Section } from "./styles";
+import { Container, Body, Header, ActionsContainer, Section } from "./styles";
 import LanguageChanger from "@components/LanguageChanger";
 import Navbar from "@components/Navbar";
 import ThemeChanger from "@components/ThemeChanger";
@@ -10,7 +10,7 @@ import Socials from "@components/Socials";
 
 const Layout: React.FC = () => {
   return (
-    <>
+    <Container>
       <Body>
         <Header>
           <Navbar />
@@ -25,7 +25,7 @@ const Layout: React.FC = () => {
         </Section>
         <Scroll />
       </Body>
-    </>
+    </Container>
   );
 };
 

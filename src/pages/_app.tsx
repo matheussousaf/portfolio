@@ -18,10 +18,9 @@ const MyApp = ({ Component, pageProps }) => {
     );
   } else {
     return (
-      <ThemeProvider theme={lightTheme}>
-        <GlobalStyle />
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <div style={{ background: "red" }}>
+        <p>Massa</p>
+      </div>
     );
   }
 };
