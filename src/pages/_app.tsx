@@ -2,6 +2,7 @@ import React from "react";
 import useDarkMode from "use-dark-mode";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "../styles/themes";
+import { GlobalStyle } from "@styles/GlobalStyle";
 
 const MyApp = ({ Component, pageProps }) => {
   const darkMode = useDarkMode(false);
@@ -11,11 +12,17 @@ const MyApp = ({ Component, pageProps }) => {
   if (process.browser) {
     return (
       <ThemeProvider theme={theme}>
+        <GlobalStyle />
         <Component {...pageProps} />
       </ThemeProvider>
     );
   } else {
-    return <p>Loading...</p>;
+    return (
+      <ThemeProvider theme={lightTheme}>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    );
   }
 };
 

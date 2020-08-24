@@ -1,6 +1,5 @@
 import React from "react";
 import Layout from "@components/Layout";
-import { GlobalStyle } from "@styles/GlobalStyle";
 import AppContextProvider from "@contexts/index";
 import Head from "next/head";
 import fs from "fs";
@@ -22,7 +21,6 @@ const IndexPage: React.FC<Props> = ({ languages }) => {
         <title>Matheus Figueirêdo</title>
       </Head>
       <AppContextProvider languages={languages}>
-        <GlobalStyle />
         <Layout />
       </AppContextProvider>
     </>

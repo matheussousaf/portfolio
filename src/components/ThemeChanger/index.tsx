@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import {
   Container,
@@ -12,13 +12,8 @@ import useDarkMode from "use-dark-mode";
 const ThemeChanger: React.FC = () => {
   const { enable, disable, value } = useDarkMode(false);
 
-  useEffect(() => {
-    console.log(value);
-  }, []);
-
   function handleToggleTheme() {
     value ? disable() : enable();
-    console.log(value);
   }
 
   return (
