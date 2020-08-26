@@ -1,9 +1,13 @@
 import React from "react";
 
-// import { Container } from './styles';
+import { Container, Title } from "./styles";
 
 const About: React.FC = () => {
-  return <div />;
+  return (
+    <Container>
+      <Title>Clean code, clean experiences.</Title>
+    </Container>
+  );
 };
 
 export default About;

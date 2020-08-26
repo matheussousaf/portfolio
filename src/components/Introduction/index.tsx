@@ -9,7 +9,7 @@ import {
   Intro,
   Emoji,
 } from "./styles";
-import Button from "@components/Button";
+import Button from "@components/ui/Button";
 import { useAppContext } from "@contexts/index";
 
 const Introduction: React.FC = () => {

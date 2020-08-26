@@ -1,12 +1,13 @@
 import React from "react";
 
 import { Container, Body, Header, ActionsContainer, Section } from "./styles";
-import LanguageChanger from "@components/LanguageChanger";
-import Navbar from "@components/Navbar";
-import ThemeChanger from "@components/ThemeChanger";
+import LanguageChanger from "@components/ui/LanguageChanger";
+import Navbar from "@components/ui/Navbar";
+import ThemeChanger from "@components/ui/ThemeChanger";
 import Introduction from "@components/Introduction";
-import Scroll from "@components/Scroll";
-import Socials from "@components/Socials";
+import Scroll from "@components/ui/Scroll";
+import Socials from "@components/ui/Socials";
+import About from "@components/About";
 
 const Layout: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ const Layout: React.FC = () => {
           <Introduction />
         </Section>
         <Scroll />
+        <About />
       </Body>
     </Container>
   );

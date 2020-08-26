@@ -18,6 +18,7 @@ export const Body = styled.div`
 
 export const Section = styled.div`
   padding: 0 20vw 0 8vw;
+  background: ${(props) => props.theme.colors.white};
   display: flex;
   flex: 1;
   min-height: 80%;
