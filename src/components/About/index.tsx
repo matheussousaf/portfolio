@@ -20,13 +20,13 @@ const About: React.FC = () => {
         </div>
         <Cards>
           <Card>
-            <p>Massa demaius</p>
+            <p>Testing</p>
           </Card>
           <Card>
-            <p>Massa demaius</p>
+            <p>Testing</p>
           </Card>
           <Card>
-            <p>Massa demaius</p>
+            <p>Testing</p>
           </Card>
         </Cards>
       </div>
