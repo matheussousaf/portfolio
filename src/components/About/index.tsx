@@ -1,36 +1,42 @@
 import React from "react";
 
-import { Container, Title, SubTitle, Description, Cards } from "./styles";
+import {
+  Container,
+  Title,
+  Description,
+  Cards,
+  LightningIcon,
+} from "./styles";
 import Card from "@components/ui/Card/index";
-import MrBean from "@assets/giphy.gif";
-// import {  } from 'styled-icons';
+import Code from "@components/ui/Code";
 
 const About: React.FC = () => {
   return (
     <Container>
       <div>
-        <img src={MrBean} />
-      </div>
-      <div>
         <div>
           <Title>Clean code, clean experiences.</Title>
-          <SubTitle>Quality for your product, your customers happy.</SubTitle>
           <Description>
             I focus on building highly functional and maintanable code.
           </Description>
         </div>
+        <div>
+          <Code />
+        </div>
         <Cards>
           <Card>
             <h3>Performance</h3>
-            <i></i>
+            <LightningIcon size={30} />
             <p>Blazing fast apps without leaving the experience.</p>
           </Card>
           <Card>
-            <h3></h3>
+            <h3>Refactoring</h3>
+            <LightningIcon size={30} />
             <p>Testing</p>
           </Card>
           <Card>
-            <h3>Code Quality</h3>
+            <h3>Performance</h3>
+            <LightningIcon size={30} />
             <p>Testing</p>
           </Card>
         </Cards>

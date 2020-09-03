@@ -1,20 +1,33 @@
 import styled from "styled-components";
+import { LightningBolt } from "@styled-icons/heroicons-solid/LightningBolt";
 import { calcFontSize } from "@styles/utils";
 
 export const Container = styled.div`
   flex: 1;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   background: ${(props) => props.theme.colors.white};
   flex-direction: row;
-  padding: 0 8vw;
+  padding: 2vh 8vw;
   flex-wrap: wrap;
 
   img {
     border-radius: 20px;
     width: 20vw;
   }
+
+  div {
+    flex: 1;
+  }
+`;
+
+export const LightningIcon = styled(LightningBolt)`
+  color: ${(props) => props.theme.colors.gray};
+  margin: 0 auto;
+  background: ${(props) => props.theme.colors.darkgray};
+  border-radius: 50%;
+  padding: 5px;
 `;
 
 export const SubTitle = styled.h3`
@@ -38,10 +51,10 @@ export const Description = styled.p`
 `;
 
 export const Cards = styled.div`
-  display: flex;
-  flex: 1;
   width: 100%;
   align-items: center;
+  flex-wrap: wrap;
+  display: flex;
   justify-content: space-between;
 
   h3 {
