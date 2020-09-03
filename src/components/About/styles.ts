@@ -9,7 +9,6 @@ export const Container = styled.div`
   background: ${(props) => props.theme.colors.white};
   flex-direction: row;
   padding: 0 8vw;
-  margin: 2vw;
   flex-wrap: wrap;
 
   img {
@@ -33,7 +32,7 @@ export const Title = styled.h1`
 `;
 
 export const Description = styled.p`
-  font-family: "Asiap", sans-serif;
+  font-family: "Asap", sans-serif;
   font-size: ${calcFontSize(16, 20)};
   color: ${(props) => props.theme.colors.darkgray};
 `;
@@ -44,4 +43,14 @@ export const Cards = styled.div`
   width: 100%;
   align-items: center;
   justify-content: space-between;
+
+  h3 {
+    color: ${(props) => props.theme.colors.black};
+    font-family: "Asap", sans-serif;
+  }
+
+  p {
+    color: ${(props) => props.theme.colors.darkgray};
+    font-family: "Asap", sans-serif;
+  }
 `;
