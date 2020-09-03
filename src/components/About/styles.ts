@@ -30,8 +30,6 @@ export const LightningIcon = styled(LightningBolt)`
   padding: 5px;
 `;
 
-export const 
-
 export const SubTitle = styled.h3`
   font-family: "Asap", sans-serif;
   font-size: ${calcFontSize(20, 22)};
